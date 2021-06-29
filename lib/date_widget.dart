@@ -7,6 +7,7 @@
 
 import 'package:date_picker_timeline/gestures/tap.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 class DateWidget extends StatelessWidget {
@@ -50,9 +51,9 @@ class DateWidget extends StatelessWidget {
                   new DateFormat("E", locale)
                       .format(date)
                       .toUpperCase(), // WeekDay
-                  style: dayTextStyle),
+                  style: GoogleFonts.poppins(color: Colors.grey)),
               Text(date.day.toString(), // Date
-                  style: dateTextStyle),
+                  style: GoogleFonts.poppins(color: Colors.grey)),
             ],
           ),
         ),
