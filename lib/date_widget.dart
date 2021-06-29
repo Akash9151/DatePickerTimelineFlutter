@@ -17,6 +17,7 @@ class DateWidget extends StatelessWidget {
   final Color selectionColor;
   final DateSelectionCallback? onDateSelected;
   final String? locale;
+  final double spaceBetween;
 
   DateWidget({
     required this.date,
@@ -27,6 +28,7 @@ class DateWidget extends StatelessWidget {
     this.width,
     this.onDateSelected,
     this.locale,
+    required this.spaceBetween,
   });
 
   @override
@@ -51,9 +53,27 @@ class DateWidget extends StatelessWidget {
                   new DateFormat("E", locale)
                       .format(date)
                       .toUpperCase(), // WeekDay
-                  style: GoogleFonts.poppins(color: Colors.grey)),
+                  style: dayTextStyle),
+
+              SizedBox(
+                height: spaceBetween,
+              ),
+
               Text(date.day.toString(), // Date
-                  style: GoogleFonts.poppins(color: Colors.grey)),
+                  style: dateTextStyle),
+
+              SizedBox(
+                height: spaceBetween,
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                height: 5.0,
+                width: 5.0,
+              ),
             ],
           ),
         ),
