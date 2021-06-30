@@ -227,10 +227,6 @@ class _DatePickerState extends State<DatePicker> {
 class DatePickerController {
   _DatePickerState? _datePickerState;
 
-  _DatePickerState? get getState {
-    return _datePickerState;
-  }
-
   void setDatePickerState(_DatePickerState state) {
     _datePickerState = state;
   }
